@@ -7,6 +7,7 @@ Description: Program takes in a user's name and age and generates a TTS response
 
 """
 
+# imports pyttsx3 module
 import pyttsx3
 
 # Initializes instance of pyttsx3
@@ -15,7 +16,7 @@ tts = pyttsx3.init()
 # Tells user speakers would be needed
 print("Make sure you have your speakers turned on!")
 
-# Prompts user for their name
+# Prompts user for their name and age
 name = input("Enter Your Name: ")
 age = input("Enter Your Age: ")
 
@@ -30,9 +31,6 @@ Happy Birthday to You.
 # Inserts given name into song lyrics
 lyrics = lyrics.replace("[name]", name)
 lyrics = lyrics.replace("[age]", age)
-
-# volume = tts.getProperty('volume')
-# print (volume)
 
 # Changes voice being used
 voices = tts.getProperty('voices')
